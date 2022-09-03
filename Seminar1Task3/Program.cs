@@ -2,31 +2,28 @@
 // # 0 Напишите программу, которая будет выдавать название дня недлеи по заданному номеру
 //============================================================================
 
-string? inputLine = Console.ReadLine();
+string? inputLine = Console.ReadLine()??"";
+int inputDayOfWeek = int.Parse(inputLine);
 
-if (inputLine != null)
-{
-    int inputDayOfWeek = int.Parse(inputLine);
+    //     string[] DayOfWeek = new string[7];
+    //     DayOfWeek[0] = "Понедельник";
+    //     DayOfWeek[1] = "Вторник";
+    //     DayOfWeek[2] = "Среда";
+    //     DayOfWeek[3] = "Четверг";
+    //     DayOfWeek[4] = "Пятница";
+    //     DayOfWeek[5] = "Суббота";
+    //     DayOfWeek[6] = "Воскресенье";
 
-//     string[] DayOfWeek = new string[7];
-//     DayOfWeek[0] = "Понедельник";
-//     DayOfWeek[1] = "Вторник";
-//     DayOfWeek[2] = "Среда";
-//     DayOfWeek[3] = "Четверг";
-//     DayOfWeek[4] = "Пятница";
-//     DayOfWeek[5] = "Суббота";
-//     DayOfWeek[6] = "Воскресенье";
-
-//     if (inputDayOfWeek > 7 || inputDayOfWeek < 1)
-//     {
-//         Console.WriteLine("Такого дня нет");
-//     }
-//     else
-//     {
-//         Console.WriteLine(DayOfWeek[inputDayOfWeek - 1]);
-//     }
-// }
-    //    string outDayOfWeek = string.Empty;//""
+    //     if (inputDayOfWeek > 7 || inputDayOfWeek < 1)
+    //     {
+    //         Console.WriteLine("Такого дня нет");
+    //     }
+    //     else
+    //     {
+    //         Console.WriteLine(DayOfWeek[inputDayOfWeek - 1]);
+    //     }
+    // }
+    string outDayOfWeek = string.Empty;//""
 
     //    switch(inputDayOfWeek)
     //    {
@@ -42,7 +39,6 @@ if (inputLine != null)
 
     //    Console.WriteLine(outDayOfWeek);
 
-    outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.)
+    outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(inputDayOfWeek));
 
     Console.WriteLine(outDayOfWeek);
-}       
