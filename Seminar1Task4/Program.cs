@@ -12,26 +12,36 @@ int inputNumberA = int.Parse(numberA);               //Преобразуем с
 int inputNumberB = int.Parse(numberB);               //Преобразуем строковое представление второго числа в знаковое целое число
 int inputNumberC = int.Parse(numberС);               //Преобразуем строковое представление третьего числа в знаковое целое число
 
-if (inputNumberA > inputNumberB)                     //Сравниваем первое и второе число
+int outNumberMax = inputNumberA > inputNumberB ? inputNumberA : inputNumberB;  //Сравниваем 2 числа используя тернарный оператор и записываем его во временную переменную
+if (outNumberMax > inputNumberC)                                               //Сравниваем число во временной переменной и третье число
 {
-    if (inputNumberA > inputNumberC)                 //Сравнивает первое и третье число
-    {
-        Console.WriteLine(inputNumberA);             //Вывод результата в консоль
-    }
-    else
-    {
-        Console.WriteLine(inputNumberC);             //Вывод результата в консоль
-    }
+    Console.WriteLine($"Максимальное число: {outNumberMax}");                  //Вывод результата в консоль
 }
 else
 {
-    if (inputNumberB > inputNumberC)                 //Сравниваем второе и третье число
-    {
-        Console.WriteLine(inputNumberB);             //Вывод результата в консоль
-    }
-    else
-    {
-        Console.WriteLine(inputNumberC);             //Вывод результата в консоль
-    }
-
+    Console.WriteLine($"Максимальное число: {inputNumberC}");                   //Вывод результата в консоль
 }
+
+// if (inputNumberA > inputNumberB)                                             //Сравниваем первое и второе число
+// {
+//     if (inputNumberA > inputNumberC)                                         //Сравнивает первое и третье число
+//     {
+//         Console.WriteLine($"Максимальное число: {inputNumberA}");            //Вывод результата в консоль
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Максимальное число: {inputNumberC}");            //Вывод результата в консоль
+//     }
+// }
+// else
+// {
+//     if (inputNumberB > inputNumberC)                                         //Сравниваем второе и третье число
+//     {
+//         Console.WriteLine($"Максимальное число: {inputNumberB}");            //Вывод результата в консоль
+//     }
+//     else
+//     {
+//         Console.WriteLine($"Максимальное число: {inputNumberC}");            //Вывод результата в консоль
+//     }
+
+// }
