@@ -23,8 +23,8 @@ int inputDayOfWeek = int.Parse(inputLine);
     //         Console.WriteLine(DayOfWeek[inputDayOfWeek - 1]);
     //     }
     // }
-    string outDayOfWeek = string.Empty;//""
-
+    
+    //string outDayOfWeek = string.Empty;//""
     //    switch(inputDayOfWeek)
     //    {
     //     case 1: outDayOfWeek="Понедельник"; break;
@@ -39,6 +39,8 @@ int inputDayOfWeek = int.Parse(inputLine);
 
     //    Console.WriteLine(outDayOfWeek);
 
-    outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(inputDayOfWeek));
-
-    Console.WriteLine(outDayOfWeek);
+    //outDayOfWeek = System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(inputDayOfWeek));
+    Object day = Enum.GetValues(typeof(DayOfWeek)).GetValue(inputDayOfWeek) ?? DayOfWeek.Monday;
+    System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.GetDayName((DayOfWeek)day);
+    
+    Console.WriteLine(day);
