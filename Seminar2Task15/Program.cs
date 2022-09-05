@@ -8,6 +8,10 @@ Console.WriteLine("Введите число: ");                      //Ком�
 string inputLine = Console.ReadLine()??"";                 //Вводим число
 int inputDayOfWeek = int.Parse(inputLine);                 //Преобразуем строковое представление числа в знаковое целое числ
 
+
+
+
+
 //Вариант 1
 System.Globalization.CultureInfo.GetCultureInfo("ru-RU").DateTimeFormat.                                      //Запрашиваем день недели из системы.
 GetDayName((DayOfWeek)Enum.GetValues(typeof(DayOfWeek)).GetValue(inputDayOfWeek)); 

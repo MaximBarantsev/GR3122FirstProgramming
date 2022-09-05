@@ -52,9 +52,9 @@ PrintData();     //Выводим результат в консоль
 void ReadData()
 {
     Console.Write("Введите первое число: ");
-    string? inputLineA = Console.ReadLine();
+    string? inputLineA = Console.ReadLine()??"";
     Console.Write("Введите второе число: ");
-    string? inputLineB = Console.ReadLine();
+    string? inputLineB = Console.ReadLine()??"";
 
     inputNumberA = int.Parse(inputLineA);
     inputNumberB = int.Parse(inputLineB);
