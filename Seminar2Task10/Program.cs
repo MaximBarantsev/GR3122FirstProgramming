@@ -4,8 +4,24 @@
 // и на выходе показывает вторую цифру этого числа.
 //================================================================
 
-Console.Write("Введите число: ");                     //Комментарий ко вводу
-string number = Console.ReadLine()??"";               //Вводим число
 
-char[] charArray = number.ToString().ToCharArray();   //Преобразуем строку в массив символов
-Console.WriteLine(charArray[1]);                      //Вывод результата в консоль
+string number = string.Empty;
+char[] charArray = {};
+
+ReadData();
+CalculateData();
+PrintData();
+
+void ReadData()
+{
+    Console.Write("Введите число: ");                     //Комментарий ко вводу
+    number = Console.ReadLine() ?? "";               //Вводим число
+}
+void CalculateData()
+{
+    charArray = number.ToString().ToCharArray();   //Преобразуем строку в массив символов
+}
+void PrintData()
+{
+    Console.WriteLine(charArray[1]);                      //Вывод результата в консоль
+}
