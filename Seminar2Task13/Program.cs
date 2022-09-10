@@ -5,7 +5,7 @@
 //================================================================
 
 string number = string.Empty;
-char[] charArray = {};
+char[] charArray = { };
 
 
 ReadData();
@@ -21,7 +21,7 @@ void ReadData()
 void CalculateData()
 {
     charArray = number.ToString().ToCharArray();                                         //Преобразуем строку в массив символов
-                                
+
 }
 
 void PrintData()

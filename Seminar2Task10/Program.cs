@@ -6,7 +6,7 @@
 
 
 string number = string.Empty;
-char[] charArray = {};
+char[] charArray = { };
 
 ReadData();
 CalculateData();

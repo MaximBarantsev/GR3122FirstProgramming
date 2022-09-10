@@ -37,6 +37,6 @@ void PrintResult(string line)
 
 int num = ReadData("Введите номер четверти: ");
 
-string res =QuterBorderAsk(num);
+string res = QuterBorderAsk(num);
 
 PrintResult(res);

@@ -18,14 +18,14 @@ int ReadData(string line)
 
 int QuterTest(int x, int y)
 {
-    if (x>0&&y>0)
-    return 1;
-    if (x<0&&y>0)
-    return 2;
-    if (x<0&&y<0)
-    return 3;
-    if (x>0&&y<0)
-    return 4;
+    if (x > 0 && y > 0)
+        return 1;
+    if (x < 0 && y > 0)
+        return 2;
+    if (x < 0 && y < 0)
+        return 3;
+    if (x > 0 && y < 0)
+        return 4;
 
     return -1;
 }
@@ -38,6 +38,6 @@ void PrintResult(string line)
 int x = ReadData("Введити координату x: ");
 int y = ReadData("Введити координату y: ");
 
-int res =QuterTest(x,y);
+int res = QuterTest(x, y);
 
-PrintResult("Точка находится в четверти №:"+res);
+PrintResult("Точка находится в четверти №:" + res);
