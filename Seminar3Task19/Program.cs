@@ -93,6 +93,6 @@ void PrintResult(string line)
 }
 
 
-int palindrom = ReadData("Введите число: ");                                             //Считываем строковое число и преобразуем в знаковое целое число
+int palindrom = ReadData("Введите число: ");                                             //Создаем переменную для полученного числа
 Dictionary<int, int> palindromDic = GenerationDicPoli();                                 //Создаем переменную для словаря
 PrintResult(TestPolinHash(palindrom, palindromDic) ? "Палиндром" : "Не палиндром");      //Вызываем функцию для вывода результата с использование тернарного оператора

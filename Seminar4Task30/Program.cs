@@ -15,12 +15,6 @@ int ReadData(string line)
     return number;
 }
 
-// Печать результата
-void PrintResult(string line)
-{
-    Console.WriteLine(line);
-}
-
 int[] GenArray(int arrLength)
 {
     int[] array = new int[arrLength];
@@ -39,7 +33,11 @@ void PrintArray(int[] arr)
     {
         Console.Write(arr[i] + ", ");
     }
-    Console.Write(arr[arr.Length - 1]);
+    Console.WriteLine(arr[arr.Length - 1]);
 }
+
+int arrLen = ReadData("Введите длину массива: ");
+int[] array = GenArray(arrLen);
+PrintArray(array);
 
 PrintArray(GenArray(ReadData("Введите длину массива: ")));

@@ -1,6 +1,7 @@
 ﻿// ---------------------------------------------------------------------
 //                                 Задача 26
-// Напишите программу, которая принимает на вход число и выдаёт количество цифр в числе
+// Напишите программу, которая принимает на вход число и выдаёт 
+// количество цифр в числе
 // ---------------------------------------------------------------------
 
 // Чтение данных из консоли
@@ -20,16 +21,6 @@ void PrintResult(string line)
     Console.WriteLine(line);
 }
 
-// int SumDigit(int num)
-// {
-//     int sum = 0;
-//     while(num>0)
-//     {
-//         sum+=num%10;
-//         num=num/10;
-//     }
-//     return sum;
-// }
 
 int DigitCount(int num)
 {
@@ -41,6 +32,13 @@ int DigitCount(int num)
     }
     return sum;
 }
+
+// //Вариант с длиной строки
+// int CalculateDigitsString(int num)
+// {
+//     string numString = num.ToString();
+//     return numString.Length;
+// }
 
 // Вариант с логарифмом
 int CalculateDigits(int num)

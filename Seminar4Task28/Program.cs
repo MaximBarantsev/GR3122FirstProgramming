@@ -40,16 +40,16 @@ long CalcData(int num)
     return num * CalcData(num - 1);
 }
 
-// константин
-long CalculateFactorial(int num)
-{
-    int factorial = 1;
-    for (int i = 1; i <= num; i++)
-    {
-        factorial = factorial * i;
-    }
-    return factorial;
-}
+// // константин
+// long CalculateFactorial(int num)
+// {
+//     long factorial = 1;
+//     for (int i = 1; i <= num; i++)
+//     {
+//         factorial = factorial * i;
+//     }
+//     return factorial;
+// }
 
 
 
