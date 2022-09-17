@@ -1,4 +1,10 @@
-﻿// // Метод считывания данных пользователя
+﻿// ---------------------------------------------------------------------
+//                                 Задача 31
+// Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9].
+// Найдите сумму отрицательных и положительных элементов массива.
+// ---------------------------------------------------------------------
+
+// // Метод считывания данных пользователя
 // int ReadData(string line)
 // {
 //     // Выводим сообщение
@@ -76,19 +82,19 @@
 
 string RandowArr(int lng, int from, int to)
 {
-  int[] array = new int[lng];
-  Random rnd = new Random();
+    int[] array = new int[lng];
+    Random rnd = new Random();
 
-  int sunNeg =0;
-  int sunPos =0;
-  for(int i = 0; i < lng; i++)
-  {
-    array[i] = rnd.Next(from, to+1);
-    if(array[i]>0)sunPos+=array[i];
-    else sunNeg+=array[i];
-  }
+    int sunNeg = 0;
+    int sunPos = 0;
+    for (int i = 0; i < lng; i++)
+    {
+        array[i] = rnd.Next(from, to + 1);
+        if (array[i] > 0) sunPos += array[i];
+        else sunNeg += array[i];
+    }
 
-  return (string.Join(", ", array)+"\n "+sunPos+" "+sunNeg);
+    return (string.Join(", ", array) + "\n " + sunPos + " " + sunNeg);
 }
 
-Console.Write(RandowArr(12,-9,9));
+Console.Write(RandowArr(12, -9, 9));
